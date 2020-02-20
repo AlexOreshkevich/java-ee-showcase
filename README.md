@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/AlexOreshkevich/java-ee-showcase.svg?branch=master)](https://travis-ci.com/AlexOreshkevich/java-ee-showcase)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 # Java EE Showcase
 Showcase of features of Java EE Platform (JSP/JSF, Servlets, EJB, JMS, WebServices etc)
 
