@@ -15,5 +15,5 @@ For Windows, use `./mvnw.cmd clean install tomee:run` to launch the project.
 # How to build war file
 `mvn package` and then war file would be located on `target/javaee-showcase.war` relative path. 
 
-# How to lauch the project
+# How to launch the project
 Just navigate to http://localhost:8080/
