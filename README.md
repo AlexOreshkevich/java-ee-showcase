@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/AlexOreshkevich/java-ee-showcase.svg?branch=master)](https://travis-ci.com/AlexOreshkevich/java-ee-showcase)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec1d4b7f3b2d43daac48be296075a740)](https://www.codacy.com/manual/AlexOreshkevich/java-ee-showcase?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AlexOreshkevich/java-ee-showcase&amp;utm_campaign=Badge_Grade)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Java EE Showcase
