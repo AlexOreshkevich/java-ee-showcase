@@ -18,6 +18,7 @@
     <finalName>javaee-showcase</finalName>
     <plugins>
 
+      <!-- https://tomee.apache.org/tomee-8.0/docs/developer/tools/maven/tomee.html -->
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
@@ -53,6 +54,13 @@
       <version>8.0.1</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- JSF dependency -->
+    <!--<dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.faces</artifactId>
+      <version>2.4.0</version>
+    </dependency>-->
 
   </dependencies>
 
