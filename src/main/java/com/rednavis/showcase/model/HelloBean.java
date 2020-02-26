@@ -1,8 +1,8 @@
 package com.rednavis.showcase.model;
 
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.annotation.ManagedBean;
+import javax.enterprise.context.SessionScoped;
 
 @ManagedBean
 @SessionScoped
