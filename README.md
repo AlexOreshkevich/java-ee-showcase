@@ -18,3 +18,6 @@ For Windows, use `./mvnw.cmd clean install tomee:run` to launch the project.
 
 # How to launch the project
 Just navigate to http://localhost:8080/
+
+# Useful links
+- http://openejb.apache.org/examples-trunk
