@@ -37,6 +37,13 @@
         </configuration>
       </plugin>
 
+      <!-- https://docs.jboss.org/wildfly/plugins/maven/latest/ -->
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>2.1.0.Beta1</version>
+      </plugin>
+
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.3</version>
