@@ -4,6 +4,6 @@
 
 FROM jboss/wildfly
 
-RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin#12345 --silent
+RUN /opt/jboss/wildfly/bin/add-user.sh -u 'admin' -p 'admin' -g 'admin'
 
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
