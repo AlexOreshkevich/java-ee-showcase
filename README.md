@@ -16,8 +16,25 @@ For Windows, use `./mvnw.cmd clean install tomee:run` to launch the project.
 # How to build war file
 `mvn package` and then war file would be located on `target/javaee-showcase.war` relative path. 
 
+# Working with Wildfly
+Use the following command to build and run docker image for wildfly:
+```
+docker build --tag=jboss/wildfly-admin .
+docker run -it jboss/wildfly-admin
+```
+Then use `wildfly-maven-plugin` or other options (like management console) to deploy your application:
+```
+mvn clean package wildfly:deploy
+```
+And for un-deploy (respectively):
+```
+mvn clean package wildfly:undeploy
+```
+Visit [Wildfly Maven Plugin](https://docs.jboss.org/wildfly/plugins/maven/latest/) for more details.
+
 # How to launch the project
-Just navigate to http://localhost:8080/
+Just navigate to http://localhost:8080/java-ee-showcase
 
 # Useful links
 - http://openejb.apache.org/examples-trunk
+- https://youtu.be/ra72h2K9vJY
