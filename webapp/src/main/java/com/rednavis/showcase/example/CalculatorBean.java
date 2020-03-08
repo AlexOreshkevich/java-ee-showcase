@@ -1,6 +1,7 @@
 package com.rednavis.showcase.example;
 
 import com.rednavis.showcase.registry.PropertyRegistry;
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -31,6 +32,6 @@ public class CalculatorBean {
   }
 
   public void displayProperties() {
-    propertyRegistry.displayProperties();
+    //propertyRegistry.displayProperties();
   }
 }

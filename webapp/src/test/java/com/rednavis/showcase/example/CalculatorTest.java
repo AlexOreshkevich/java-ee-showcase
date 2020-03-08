@@ -24,7 +24,7 @@ public class CalculatorTest {
 
   @Before
   public void lookupABean() throws NamingException {
-    Object object = ejbContainer.getContext().lookup("java:global/java-ee-showcase/CalculatorBean");
+    Object object = ejbContainer.getContext().lookup("java:global/webapp/CalculatorBean");
 
     assertTrue(object instanceof CalculatorBean);
 
