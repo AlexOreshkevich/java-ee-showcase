@@ -39,6 +39,11 @@ public class CalculatorTest {
   }
 
   @Test
+  public void shouldDisplayProperties() {
+    calculator.displayProperties();
+  }
+
+  @Test
   public void shouldDisplayAllContextEntries() throws Exception {
     ejbContainer.getContext().getEnvironment().forEach((k, v) -> {
       System.out.println("key " + k + " value " + v);
