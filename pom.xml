@@ -8,17 +8,50 @@
 
   <modules>
     <module>shared</module>
+    <module>ejb-impl</module>
     <module>webapp</module>
     <module>ear</module>
   </modules>
 
-  <name>Java EE Showcase Webapp</name>
+  <name>Java EE Showcase</name>
   <url>TODO</url>
 
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-ear-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <skinnyWars>true</skinnyWars>
+            <defaultLibBundleDir>lib</defaultLibBundleDir>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-ejb-plugin</artifactId>
+          <version>3.0.1</version>
+          <configuration>
+            <ejbVersion>3.1</ejbVersion>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.3</version>
+          <configuration>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
   <pluginRepositories>
     <pluginRepository>

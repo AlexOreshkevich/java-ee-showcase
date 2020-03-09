@@ -14,12 +14,23 @@
   <artifactId>webapp</artifactId>
   <packaging>war</packaging>
 
+  <dependencies>
+    <dependency>
+      <artifactId>shared</artifactId>
+      <groupId>com.rednavis</groupId>
+      <version>1.0-SNAPSHOT</version>
+      <!-- This is unnecessary but IntelliJ ignores skinnyWars=true. https://youtrack.jetbrains.com/issue/IDEA-97324 -->
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <defaultGoal>package tomee:run</defaultGoal>
     <finalName>javaee-showcase-webapp</finalName>
     <plugins>
 
       <!-- https://tomee.apache.org/tomee-8.0/docs/developer/tools/maven/tomee.html -->
+      <!-- http://tomee.apache.org/tomee-maven-plugin.html -->
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
