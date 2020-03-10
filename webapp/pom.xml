@@ -27,6 +27,11 @@
       <version>1.0-SNAPSHOT</version>
       <type>ejb</type>
     </dependency>
+    <dependency>
+      <groupId>com.ibm.mq</groupId>
+      <artifactId>com.ibm.mq.allclient</artifactId>
+      <version>9.0.4.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -49,7 +54,7 @@
               <extension>.class</extension>
             </extensions>
           </synchronization>
-          <args>-Xmx1024m -XX:PermSize=256m</args>
+          <args>-Xmx1024m -XX:PermSize=256m -Dtomee.serialization.class.blacklist=- -Dtomee.serialization.class.whitelist=[Ljava.net.URI;</args>
           <removeDefaultWebapps>true</removeDefaultWebapps>
         </configuration>
       </plugin>
