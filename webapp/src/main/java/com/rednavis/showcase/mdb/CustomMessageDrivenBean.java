@@ -2,36 +2,31 @@ package com.rednavis.showcase.mdb;
 
 
 import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
-import javax.ejb.MessageDrivenContext;
+import javax.jms.JMSConnectionFactoryDefinition;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
-// http://tomee.apache.org/jmsconnectionfactory-config.html
-/*@JMSConnectionFactoryDefinition(
-    name="java:global/jms/CustomConnectionFactory",
+@JMSConnectionFactoryDefinition(
+    name = "openejb/Resource/javaee-showcase-webapp/CustomConnectionFactory",
+    className = "com.rednavis.showcase.mdb.CustomConnectionFactory",
     user = "sci",
     password = "sci",
-    transactional = false
-)*/
-/*@MessageDriven(activationConfig = {
+    transactional = false)
+@MessageDriven(activationConfig = {
     @ActivationConfigProperty(propertyName = "destination", propertyValue = "UC/INPUT"),
     @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
     @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
-    @ActivationConfigProperty(propertyName = "connectionFactoryLookup", propertyValue = "java:global/webapp/CustomConnectionFactory")  // connectionFactoryJndiName
-})*/
+    @ActivationConfigProperty(propertyName = "connectionFactoryLookup", propertyValue = "openejb/Resource/javaee-showcase-webapp/CustomConnectionFactory")
+})
 public class CustomMessageDrivenBean implements MessageListener {
 
-  //@Resource
-  private MessageDrivenContext mdctx;
-
-  //@PostConstruct
+  @PostConstruct
   public void init() {
-    System.out.println("Bean created " + CustomMessageDrivenBean.class.getName());
+    System.out.println("\n\n!!!!Bean created " + getClass().getName() + "\n\n");
   }
 
   // https://docs.oracle.com/middleware/1213/wls/JMSPG/j2ee.htm#JMSPG911
