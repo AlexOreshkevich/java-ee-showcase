@@ -1,8 +1,0 @@
-<Resource id="myJmsConnectionFactory" type="javax.jms.ConnectionFactory">
-  connectionMaxIdleTime = 15 Minutes
-  connectionMaxWaitTime = 5 seconds
-  poolMaxSize = 10
-  poolMinSize = 0
-  resourceAdapter = Default JMS Resource Adapter
-  transactionSupport = xa
-</Resource>

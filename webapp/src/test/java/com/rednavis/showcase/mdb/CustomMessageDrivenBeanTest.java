@@ -10,6 +10,7 @@ import javax.jms.Session;
 import javax.jms.TextMessage;
 import javax.naming.NamingException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CustomMessageDrivenBeanTest {
@@ -23,6 +24,7 @@ public class CustomMessageDrivenBeanTest {
   }
 
   @Test
+  @Ignore
   public void shouldReceiveMessage() throws Exception {
 
     try (final Connection connection = connectionFactory.createConnection()) {

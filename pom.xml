@@ -21,6 +21,8 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <version.org.liquibase>3.6.2</version.org.liquibase>
+    <version.com.mattbertolini.liquibase-slf4j>2.0.0</version.com.mattbertolini.liquibase-slf4j>
   </properties>
 
   <build>
@@ -87,6 +89,36 @@
       <version>8.0.1</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Persistence -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.0.0.Final</version>
+    </dependency>
+
+    <!-- JDBC driver -->
+    <!--<dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.11</version>
+    </dependency> -->
+
+    <!--<dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-core</artifactId>
+      <version>${version.org.liquibase}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-cdi</artifactId>
+      <version>${version.org.liquibase}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mattbertolini</groupId>
+      <artifactId>liquibase-slf4j</artifactId>
+      <version>${version.com.mattbertolini.liquibase-slf4j}</version>
+    </dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
