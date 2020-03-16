@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-  <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <artifactId>showcase</artifactId>
     <groupId>com.rednavis</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>webapp</artifactId>
+  <artifactId>dashboard</artifactId>
+  <name>Messages dashboard application</name>
   <packaging>war</packaging>
 
   <dependencies>
@@ -38,7 +37,7 @@
 
   <build>
     <defaultGoal>package tomee:run</defaultGoal>
-    <finalName>javaee-showcase-webapp</finalName>
+    <finalName>dashboard</finalName>
     <plugins>
 
       <!-- https://tomee.apache.org/tomee-8.0/docs/developer/tools/maven/tomee.html -->
@@ -48,8 +47,8 @@
         <artifactId>tomee-maven-plugin</artifactId>
         <version>8.0.1</version>
         <configuration>
-          <tomeeHttpPort>8080</tomeeHttpPort>
-          <context>javaee-showcase-webapp</context>
+          <tomeeHttpPort>8081</tomeeHttpPort>
+          <context>dashboard</context>
           <reloadOnUpdate>true</reloadOnUpdate>
           <tomeeClassifier>plume</tomeeClassifier>
           <synchronization>
@@ -82,5 +81,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>

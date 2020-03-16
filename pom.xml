@@ -11,6 +11,7 @@
     <module>ejb-impl</module>
     <module>webapp</module>
     <module>ear</module>
+    <module>dashboard</module>
   </modules>
 
   <name>Java EE Showcase</name>

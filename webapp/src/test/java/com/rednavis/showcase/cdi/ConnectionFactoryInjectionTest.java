@@ -3,8 +3,8 @@ package com.rednavis.showcase.cdi;
 import static org.junit.Assert.assertNotNull;
 
 import com.rednavis.showcase.BasicCdiTest;
-import com.rednavis.showcase.mdb.CustomConnectionFactory;
-import com.rednavis.showcase.mdb.MessageManager;
+import com.rednavis.showcase.messaging.CustomConnectionFactory;
+import com.rednavis.showcase.messaging.MessageManager;
 import javax.annotation.ManagedBean;
 import javax.ejb.EJB;
 import org.junit.Test;

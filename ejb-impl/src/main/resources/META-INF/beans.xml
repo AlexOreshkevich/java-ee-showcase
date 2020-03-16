@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This XML file is required for CDI -->
+<!-- Annotations like @Inject would not work without this file -->
+<beans/>

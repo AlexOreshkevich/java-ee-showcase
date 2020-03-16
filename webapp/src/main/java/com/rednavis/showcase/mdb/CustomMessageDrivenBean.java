@@ -12,7 +12,7 @@ import javax.jms.TextMessage;
 
 @JMSConnectionFactoryDefinition(
     name = "openejb/Resource/javaee-showcase-webapp/CustomConnectionFactory",
-    className = "com.rednavis.showcase.mdb.CustomConnectionFactory",
+    className = "com.rednavis.showcase.messaging.CustomConnectionFactory",
     user = "sci",
     password = "sci",
     transactional = false)

@@ -1,5 +1,6 @@
 package com.rednavis.showcase.mdb;
 
+import com.rednavis.showcase.messaging.CustomConnectionFactory;
 import javax.ejb.embeddable.EJBContainer;
 import javax.inject.Inject;
 import javax.jms.Connection;

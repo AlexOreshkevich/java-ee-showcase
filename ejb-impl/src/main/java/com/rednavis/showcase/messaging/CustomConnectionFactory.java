@@ -1,4 +1,4 @@
-package com.rednavis.showcase.mdb;
+package com.rednavis.showcase.messaging;
 
 import com.ibm.msg.client.jms.JmsConnectionFactory;
 import com.ibm.msg.client.jms.JmsFactoryFactory;
