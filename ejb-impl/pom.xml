@@ -13,10 +13,35 @@
   <packaging>ejb</packaging>
 
   <dependencies>
+
     <dependency>
       <artifactId>shared</artifactId>
       <groupId>com.rednavis</groupId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
+    <dependency>
+      <artifactId>shared</artifactId>
+      <groupId>com.rednavis</groupId>
+      <version>1.0-SNAPSHOT</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JDBC driver -->
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.1-901-1.jdbc4</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>8.0.1</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 </project>

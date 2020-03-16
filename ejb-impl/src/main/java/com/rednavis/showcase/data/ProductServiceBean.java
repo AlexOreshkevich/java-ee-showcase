@@ -1,5 +1,6 @@
-package com.rednavis.showcase.service;
+package com.rednavis.showcase.data;
 
+import com.rednavis.showcase.api.ProductService;
 import com.rednavis.showcase.exception.BeanInstantiationException;
 import com.rednavis.showcase.model.Product;
 import java.sql.DatabaseMetaData;
@@ -11,7 +12,6 @@ import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
-import javax.persistence.Query;
 import javax.sql.DataSource;
 
 @DataSourceDefinition(
@@ -25,7 +25,7 @@ import javax.sql.DataSource;
     //password = "examples"
 )
 @Stateful
-public class ProductService {
+public class ProductServiceBean implements ProductService {
 
   @PersistenceContext(unitName = "persistenceUnit", type = PersistenceContextType.EXTENDED)
   private EntityManager entityManager;
@@ -49,21 +49,43 @@ public class ProductService {
     }
   }
 
-  public void add(Product product) {
-    entityManager.persist(product);
+  @Override
+  public Product save(Product entity) {
+    entityManager.persist(entity);
+    return entity;
   }
 
-  public void delete(Product product) {
-    entityManager.remove(product);
+  @Override
+  public Product findById(Long id) {
+    return entityManager.find(Product.class, id);
   }
 
+  @Override
   @SuppressWarnings("unchecked")
-  public List<Product> get() {
-    Query query = entityManager.createQuery("SELECT p from Product as p");
-    return query.getResultList();
+  public List<Product> findAll() {
+    return entityManager.createQuery("SELECT p from Product p").getResultList();
   }
 
-  public void flush() {
-    entityManager.flush();
+  @Override
+  public long count() {
+    return (Long) entityManager.createQuery("SELECT COUNT(p) from Product p").getSingleResult();
+  }
+
+  @Override
+  public void deleteById(Long id) {
+    Product product = findById(id);
+    if (product != null) {
+      delete(product);
+    }
+  }
+
+  @Override
+  public void delete(Product entity) {
+    entityManager.remove(entity);
+  }
+
+  @Override
+  public void deleteAll() {
+    entityManager.createQuery("DELETE FROM Product p").executeUpdate();
   }
 }

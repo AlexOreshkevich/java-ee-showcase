@@ -1,7 +1,7 @@
 package com.rednavis.showcase;
 
 import com.rednavis.showcase.model.Product;
-import com.rednavis.showcase.service.ProductService;
+import com.rednavis.showcase.data.ProductServiceBean;
 import java.io.IOException;
 import java.util.UUID;
 import javax.ejb.EJB;
@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 public class ProductServlet extends HttpServlet {
 
   @EJB
-  private ProductService productService;
+  private ProductServiceBean productService;
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse response) throws IOException {
 
     StringBuilder builder = new StringBuilder();
-    for (Product product : productService.get()){
+    for (Product product : productService.findAll()){
       builder.append(product.toString());
     }
 
@@ -29,6 +29,6 @@ public class ProductServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-    productService.add(new Product(UUID.randomUUID().toString()));
+    productService.save(new Product(UUID.randomUUID().toString()));
   }
 }
