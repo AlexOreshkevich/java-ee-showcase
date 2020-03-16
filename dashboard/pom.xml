@@ -48,6 +48,8 @@
         <version>8.0.1</version>
         <configuration>
           <tomeeHttpPort>8081</tomeeHttpPort>
+          <tomeeAjpPort>8010</tomeeAjpPort>
+          <tomeeShutdownPort>8006</tomeeShutdownPort>
           <context>dashboard</context>
           <reloadOnUpdate>true</reloadOnUpdate>
           <tomeeClassifier>plume</tomeeClassifier>
